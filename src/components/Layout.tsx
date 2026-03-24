@@ -56,7 +56,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
+          {/* Desktop Nav & Contact */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
@@ -76,20 +76,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 />
               </Link>
             ))}
-          </nav>
-
-          {/* Right Actions */}
-          <div className="hidden lg:flex items-center gap-6">
+            
+            <div className="w-[1px] h-4 bg-gold-primary/40 ml-2 mr-2" />
+            
             <a href="tel:+211925754459" className="flex items-center gap-2 text-white hover:text-gold-primary transition-colors">
               <Phone size={16} />
               <span className="text-[13px]">+211 925 754 459</span>
             </a>
-            <div className="w-[1px] h-5 bg-gold-primary/50" />
-            <div className="flex gap-2 text-[13px] text-white font-medium">
-              <button className="text-gold-primary">EN</button>
-              <span className="text-white/50">|</span>
-              <button className="hover:text-gold-primary transition-colors">AR</button>
-            </div>
+          </nav>
+
+          {/* Right Actions */}
+          <div className="hidden lg:flex items-center">
             <Link
               to="/booking"
               className="bg-gold-primary text-charcoal-deep text-[13px] font-semibold tracking-[2px] uppercase px-7 py-3 rounded hover:bg-gold-light transition-colors shadow-gold"
